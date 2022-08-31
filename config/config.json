@@ -1,0 +1,23 @@
+{
+    "version": "0.0.1.0",
+    "name": "my-app",
+    "docker": [
+        {
+            "name": "",
+            "service": "mssql",
+            "mount": ":/var/opt/mssql",
+            "image": "mine/mssql:no-p",
+            "port": 3002,
+            "env": [
+                "ACCEPT_EULA=Y",
+                "MSSQL_SA_PASSWORD=123&aoeuI"
+            ],
+            "persist": true,
+            "backup": true,
+            "seed": [
+                "1",
+                "2"
+            ]
+        }
+    ]
+}
